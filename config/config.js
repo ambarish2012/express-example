@@ -1,5 +1,5 @@
 module.exports = {
-  "development": {
+  development: {
     "username": "shippable",
     "password": "test1234",
     "database": "testdb",
@@ -15,7 +15,7 @@ module.exports = {
     "dialect": "postgres",
     "protocol": "postgres",
     "port": 5432,
-    "host": "127.0.0.1""
+    "host": "127.0.0.1"
   },
   production: {
     username: process.env.DB_USERNAME,
