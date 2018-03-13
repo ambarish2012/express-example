@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "pretest": "NODE_ENV=test npm run dbcreate && NODE_ENV=test npm run dbmigrate",
     "start": "DEBUG=express-sequelize node ./bin/www",
     "test": "npm run test-unit && npm run test-integration",
     "test-unit": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/unit/*.test.js",
-    "test-integration": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/integration/*.test.js"
+    "test-integration": "cross-env NODE_ENV=test ./node_modules/.bin/mocha test/integration/*.test.js",
+    "dbcreate": "sequelize db:drop || true && sequelize db:create",
+    "dbmigrate": "sequelize db:migrate"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
