@@ -1,11 +1,21 @@
 module.exports = {
-  development: {
-    dialect: "sqlite",
-    storage: "./db.development.sqlite"
+  "development": {
+    "username": "shippable",
+    "password": null,
+    "database": "testdb",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": 5432,
+    "host": "127.0.0.1"
   },
   test: {
-    dialect: "sqlite",
-    storage: ":memory:"
+    "username": "shippable",
+    "password": null,
+    "database": "testdb",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "port": 5432,
+    "host": "127.0.0.1""
   },
   production: {
     username: process.env.DB_USERNAME,
