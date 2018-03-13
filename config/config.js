@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "shippable",
-    "password": null,
+    "password": "test1234",
     "database": "testdb",
     "dialect": "postgres",
     "protocol": "postgres",
@@ -10,7 +10,7 @@ module.exports = {
   },
   test: {
     "username": "shippable",
-    "password": null,
+    "password": "test1234",
     "database": "testdb",
     "dialect": "postgres",
     "protocol": "postgres",
