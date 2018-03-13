@@ -8,8 +8,9 @@ node_js:
   
 build:
   ci:
-    - psql -c "create role shippable WITH PASSWORD 'test1234' with superuser;" -U postgres
+    - psql -c "create role shippable WITH PASSWORD 'test1234';" -U postgres
     - psql -c 'create database testdb;' -U postgres
+    - psql -c 'grant all privileges on database testdb to shippable;' -U postgres
     - npm install
     - npm test
     
